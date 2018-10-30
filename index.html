@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>简历</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="./loading.css">
+    <script src="//at.alicdn.com/t/font_763733_xxbe0xv3kij.js"></script>
+    <style type="text/css">
+        .site-welcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
+    <div id="topNavBar" class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <a class="logo" href="#" alt="logo">
+                <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav class="menu">
+                <ul class="clearfix">
+                    <li><a href="#siteAbout">关于</a></li>
+                    <li><a href="#siteSKills">技能</a></li>
+                    <li>
+                        <a href="#sitePortfolio">作品</a>
+                        <ul class="submenu">
+                            <li><a href="">作品1</a></li>
+                            <li><a href="">作品2</a></li>
+                            <li><a href="">作品3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://youyitian.info/">博客</a></li>
+                    <li><a href="">日历</a></li>
+                    <li><a href="">联系方式</a></li>
+                    <li><a href="">其他</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+
+    <main>
+        <div class="userCard" id="siteAbout" data-x>
+            <div class="pictureAndText clearfix">
+                <div class="headPhoto">
+                    <img src="./img/avatar.jpg" width="299" height="347" alt="head">
+                </div>
+                <div class="text">
+                    <span class="welcome">Hello
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>Feng</h1>
+                    <p>前端开发工程师</p>
+                    <hr>
+                    <dl>
+                        <dt>AGE</dt>
+                        <dd>18</dd>
+                        <dt>ADDRESS</dt>
+                        <dd>GuangZhou</dd>
+                        <dt>E-MAIL</dt>
+                        <dd>yiitanyou123@gmail.com</dd>
+                        <dt>PHONE</dt>
+                        <dd>+86 12345678910</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <footer class="media">
+                <a href="https://www.jianshu.com/u/65bf1f264737" target="_blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                </a>
+                <a href="https://github.com/yeman1" target="_blank">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg></a>
+                <a href="mailto: yitianyou123@gmail.com">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-youxiang"></use>
+                    </svg>
+                </a>
+            </footer>
+        </div>
+        <p style="text-align: center;">
+            <a class="button" href="">下载 PDF</a>
+        </p>
+        <P class="introduce" style="font-family: 'SimSun';">Feng 前端开发工程师<br>
+            前端开发，node.js开发
+        </P>
+    </main>
+    <section class="skills" id="siteSKills" data-x>
+        <h2>技能</h2>
+        <ol class="clearfix">
+            <li>
+                <h3>HTML5 &amp; CSS 3</h3>
+                <div class="progressBar">
+                    <div class="progress1"></div>
+                </div>
+            </li>
+
+            <li>
+                <h3>JavaScript</h3>
+                <div class="progressBar">
+                    <div class="progress2"></div>
+                </div>
+            </li>
+            <li>
+                <h3>jQuery</h3>
+                <div class="progressBar">
+                    <div class="progress3"></div>
+                </div>
+            </li>
+            <li>
+                <h3>Vue</h3>
+                <div class="progressBar">
+                    <div class="progress4"></div>
+                </div>
+            </li>
+            <li>
+                <h3>React</h3>
+                <div class="progressBar">
+                    <div class="progress5"></div>
+                </div>
+            </li>
+            <li>
+                <h3>HTTP</h3>
+                <div class="progressBar">
+                    <div class="progress1"></div>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section class="portfolio" id="sitePortfolio" data-x>
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS &amp; CSS</li>
+            </ol>
+            <div id="portfolioBar" class="bar state1">
+                <div class="bar-inner"></div>
+            </div>
+        </nav>
+
+        <script>
+            portfolio1.onclick = function () {
+                portfolioBar.className = 'bar state1'
+            }
+            portfolio2.onclick = function () {
+                portfolioBar.className = 'bar state2'
+            }
+            portfolio3.onclick = function () {
+                portfolioBar.className = 'bar state3'
+            }
+        </script>
+
+        <div class="works" style="height: 576px;">
+            <div class="big" style="top: 0px; left: 0;"><img src="./img/1.jpg" alt=""></div>
+            <div class="small" style="top: 0; left: 643.9px;"><img src="./img/2.jpg" alt=""></div>
+            <div class="small" style="top: 298px; left: 643.9px;"><img src="./img/3.jpg" alt=""></div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+    <script>
+        // 添加加载动画
+        setTimeout(function () {
+            siteWelcome.classList.remove('active')
+        }, 500)
+
+        let specialTags = document.querySelectorAll('[data-x]')
+        for (let i = 0; i < specialTags.length; i++) {
+            specialTags[i].classList.add('offset')
+        }
+
+        setTimeout(function () {
+            findClosest()
+        }, 500)
+
+        //设置topNavBar滚动变形
+        window.onscroll = function () {
+            if (window.scrollY > 0) {
+                topNavBar.classList.add('sticky')
+            } else {
+                topNavBar.classList.remove('sticky')
+            }
+            findClosest()
+        }
+        
+        //寻找离滚轮最近的节点
+        function findClosest() {
+            let specialTags = document.querySelectorAll('[data-x]')
+            let minIndex = 0
+            for (let i = 1; i < specialTags.length; i++) {
+                if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop -
+                        window.scrollY)) {
+                    minIndex = i
+                }
+            }
+            // minIndex 就是里窗口顶部最近的元素
+            specialTags[minIndex].classList.remove('offset')
+            let id = specialTags[minIndex].id
+            let a = document.querySelector('a[href="#' + id + '"]')
+            let li = a.parentNode
+            let brothersAndMe = li.parentNode.children
+            for (let i = 0; i < brothersAndMe.length; i++) {
+                brothersAndMe[i].classList.remove('highlight')
+            }
+            li.classList.add('highlight')
+        }
+
+        //为每个topNavBar按钮设置下拉框动画
+        let liTags = document.querySelectorAll('nav.menu > ul > li')
+        // console.log(liTags)
+        for (let i = 0; i < liTags.length; i++) {
+            liTags[i].onmouseenter = function (x) {
+                x.currentTarget.classList.add('active')
+
+
+                liTags[i].onmouseleave = function (x) {
+                    x.currentTarget.classList.remove('active')
+
+                }
+            }
+        }
+
+        //跳转到页面的锚点
+        let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
+
+        //利用tween.js设置跳转动画
+        for (let i = 0; i < aTags.length; i++) {
+            aTags[i].onclick = function (x) {
+                x.preventDefault()
+                let a = x.currentTarget
+                let href = a.getAttribute('href')
+                var stmp = href.slice(0, 1);
+
+                if (stmp === '#') {
+                    let element = document.querySelector(href)
+                    let top = element.offsetTop
+                    let currenTop = window.scrollY //当前滚轮离顶部多少像素
+                    let targetTop = top - 80 // 移动到目标的像素
+
+                    let s = targetTop - currenTop
+                    var t = Math.abs((s / 100) * 200)
+                    if (t < 400) {
+                        t = 400
+                    }
+                    var coords = {
+                        y: currenTop
+                    };
+
+                    var tween = new TWEEN.Tween(coords)
+                        .to({
+                            y: targetTop
+                        }, t)
+                        .easing(TWEEN.Easing.Quadratic.InOut)
+                        .onUpdate(function () {
+                            window.scrollTo(0, coords.y)
+                        })
+                        .start();
+                } else {
+                    window.open(href)
+                }
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

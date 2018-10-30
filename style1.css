@@ -1,0 +1,115 @@
+/*-------------------default style----------------------------*/
+body {background: #efefef;margin: 0;}
+a {color: inherit;text-decoration: none;}
+* {margin: 0;padding: 0;}
+hr {height: 0;border: none;border-top: 1px solid #9A9DA2;}
+.clearfix::after {content: '';display: block;clear: both;}
+ul,
+ol {list-style: none;}
+main {margin-top: -350px;}
+
+
+[data-x].offset{
+    transform: translateY(50px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+/*-------------------topNavBar----------------------------*/
+.topNavBar {padding: 15px 0 15px 0;position: fixed;top: 0;left: 0; width: 100%;transition: 1s;color: #b7b7b7;}
+.topNavBar.sticky {padding: 10px 0 10px 0;background: white;z-index: 1;
+box-shadow: 0 0 10px rgba((0, 0, 0, 0.25), green, blue, alpha);color: #3d4451;}
+.topNavBar-inner {padding: 0 16px;}
+
+/*-------------------logo--------------------------*/
+.topNavBar .logo {float: left;font-size: 26px;font-family: "Arial Black";}
+.topNavBar .logo .rs {color: #e8676b;margin-right: 5px;}
+.topNavBar .logo .card {color: #9A9DA2;}
+
+/*-------------------nav--------------------------*/
+.topNavBar nav {float: right;}
+.topNavBar nav>ul {margin: 0;padding: 0;}
+.topNavBar nav>ul>li {
+padding-top: 2px;padding-bottom: 2px;float: left;list-style: none;margin-left: 17px;margin-right: 17px;
+font-size: 12px;font-weight: bold;position: relative;}
+.topNavBar nav>ul>li>a {display: block;border-top: solid 3px transparent;border-bottom: solid 3px transparent;
+padding-top: 5px;padding-bottom: 5px;position: relative;}
+.topNavBar nav>ul>li.active > a::after,
+.topNavBar nav>ul>li.highlight > a::after {position: absolute;content: '';display: block;top: 100%;
+left: 0;width: 100%;height: 3px;background: #e8676b;box-shadow: 0 0 10px rgba((0, 0, 0, 0.25), green, blue, alpha);animation: menuSlide 0.5s;}
+@keyframes menuSlide {0% { width: 0;}100% {width: 100%;}}
+.topNavBar .submenu{display: none;position: absolute;top: 100%;left: 0;background: white;color: #3d4451;box-shadow: (0,0,)}
+.topNavBar li.active> .submenu{display: block;animation: submenuSlide .3s; }
+@keyframes submenuSlide{0%{margin-left: 100%;}100%{margin-left: 0%;}}
+.topNavBar .submenu >li{white-space: nowrap;padding: 5px 10px;}
+
+/*-------------------banner--------------------------*/
+.banner {height: 515px;background-image: url(./img/wallhaven-287793.jpg);background-position: center center;background-size: cover;}
+.banner .mask {height: 515px;background-color: rgba(0, 0, 0, 0.6)}
+
+/*-------------------userCard--------------------------*/
+.userCard {max-width: 940px;margin: 0 auto;background-color: #ffffff;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.4);}
+.userCard .pictureAndText {padding: 50px;}
+.userCard .headPhoto,
+.userCard .text {float: left;}
+.userCard .headPhoto {margin-right: 65px;border-bottom-color: transparent}
+.userCard .text .welcome {padding: 6px 13px;background-color: #e8676b;color: white;font-weight: 700;
+line-height: 1.1;display: inline-block;position: relative;}
+.userCard .text .triangle {display: block;border: 10px solid transparent;width: 0px;border-top-width: 0px;
+border-left-color: #e8676b;position: absolute;left: 3px;top: 100%;}
+.userCard .text {width: 470px;}
+.userCard .text h1 {margin-top: 20px;}
+.userCard .text hr {margin: 20px 0;}
+.userCard .text dt,
+.userCard .text dd {float: left;padding: 5px 0;}
+.userCard .text dt {font-weight: 700;width: 40%;}
+.userCard .text dd {width: 60%;color: #9d9d9d;}
+.userCard .media {background-color: #e8676b;text-align: center;}
+.userCard .media>a {display: inline-block;border-radius: 50%;width: 40px;line-height: 1.1;padding: 5px 0;margin: 15PX;}
+.userCard>footer.media a:hover {background: #CF5D5F;}
+.userCard svg {width: 30px;height: 30px;fill: #ffffff;vertical-align: top;}
+
+/*------------------- download PDF--------------------------*/
+.button {line-height: 16px;margin: 40px 0;padding: 20px 90px;display: inline-block;background: #efefef;border: 1px solid #cdcfd1;
+font-size: 14px;border-radius: 5px;color: #3d4451;transition: box-shadow 0.1s;font-weight: bold;}
+.button:hover {box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2)}
+
+/*------------------me about--------------------------*/
+.introduce {max-width: 940px;margin: 0 auto;text-align: center;}
+
+/*------------------site SKills--------------------------*/
+section.skills,
+section.portfolio {max-width: 940px;margin: 0 auto;}
+section.skills>h2,
+section.portfolio>h2 {text-align: center;margin: 30px 0;color: #3d4451;font-size: 34px;line-height: 1.2;font-weight: 600;}
+section.skills ol {background-color: #ffffff;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.4);padding: 40px 50px 10px;}
+section.skills>ol>li {width: 48%;float: left;box-sizing: border-box;}
+section.skills>ol>li:nth-child(even) {float: right;}
+section.skills .progressBar {height: 5px;background-color: #FAE1E1;border-radius: 10px;margin: 4px 0 40px; overflow: hidden;}
+section.skills .progress1 {height: 100%;background-color: #CF5D5F;width: 70%;border-radius: 10px; animation: progress1Slide 1.5s;}
+section.skills .progress2 {height: 100%;background-color: #CF5D5F;width: 50%;border-radius: 10px; animation: progress2Slide 1.5s;}
+section.skills .progress3 {height: 100%;background-color: #CF5D5F;width: 30%;border-radius: 10px; animation: progress3Slide 1.5s;}
+section.skills .progress4 {height: 100%;background-color: #CF5D5F;width: 20%;border-radius: 10px; animation: progress4Slide 1.5s;}
+section.skills .progress5 {height: 100%;background-color: #CF5D5F;width: 90%;border-radius: 10px; animation: progress5Slide 1.5s;}
+
+section.skills h3 {font-size: 14px;font-weight: normal;color: #3d4451;}
+
+
+/*------------------site portfolio--------------------------*/
+section.portfolio {text-align: center;margin-bottom: 50px;}
+section.portfolio>nav {display: inline-block;vertical-align: top;}
+section.portfolio>nav>ol {display: inline-block;vertical-align: top;}
+section.portfolio>nav>ol>li {float: left;margin-left: 40px;cursor: pointer;}
+section.portfolio>nav>ol>li:first-child {margin-left: 0;}
+section.portfolio>nav>.bar {margin-top: 13px;height: 5px;background: #ffffff;margin-bottom: 20px;}
+section.portfolio>nav>.bar>.bar-inner {height: 100%;transition: all 0.5s;background: #CF5D5F;border-radius: 10px;}
+section.portfolio>nav>.bar.state1 .bar-inner {margin-left: 0px;width: 35px;}
+section.portfolio>nav>.bar.state2 .bar-inner {margin-left: 70px;width: 40px;}
+section.portfolio>nav>.bar.state3 .bar-inner {margin-left: 145px;width: 100px;}
+section.portfolio .works {position: relative;}
+section.portfolio .works>.big,
+section.portfolio .works>.small {position: absolute;}
+section.portfolio .works>.big>img,
+section.portfolio .works>.small>img {box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);}
